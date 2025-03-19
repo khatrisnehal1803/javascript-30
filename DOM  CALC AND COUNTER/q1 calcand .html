@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="h2">00</h1>
+    <br>
+    <input type="text" id="one" placeholder="Enter first number ">
+    <input type="text" id="two" placeholder="Enter first second "> <br> <br>
+    <button id="btn1"> + </button>
+    <button id="btn2"> - </button>
+    <button id="btn3"> X </button>
+    <button id="btn4"> / </button>
+    <button id="btn5"> % </button>
+
+    <script>
+    const one = document.getElementById("one")
+    const two = document.getElementById("two")
+    const btn1 = document.getElementById("btn1")
+    const h2 = document.getElementById("h2")
+
+    btn1.addEventListener("click" , () => 
+    {
+
+        let first_number = parseInt(one.value)
+        let second_number = parseInt(two.value)
+        let sum = first_number + second_number; 
+
+        h2.innerHTML = " Sum of " + first_number + " & " +  second_number + " is :-  " +  sum ;
+    })
+    
+    btn2.addEventListener("click" , () => 
+    {
+
+        let first_number = parseInt(one.value)
+        let second_number = parseInt(two.value)
+        let sub = first_number - second_number; 
+
+        h2.innerHTML = " Subtraction of " + first_number + " & " +  second_number + " is :-  " +  sub ;
+
+    })
+    
+    btn3.addEventListener("click" , () => 
+    {
+
+        let first_number = parseInt(one.value)
+        let second_number = parseInt(two.value)
+        let mult = first_number * second_number; 
+
+        h2.innerHTML = " Multiplication of " + first_number + " & " +  second_number + " is :-  " +  mult ;
+
+    })
+    
+    btn4.addEventListener("click" , () =>
+    {
+
+        let first_number = parseInt(one.value)
+        let second_number = parseInt(two.value)
+        let div = first_number / second_number; 
+
+        h2.innerHTML = " Division of " + first_number + " & " +  second_number + " is :-  " +  div ;
+
+    })
+    
+    btn5.addEventListener("click" , () => 
+    {
+
+        let first_number = parseInt(one.value)
+        let second_number = parseInt(two.value)
+        let mod = first_number % second_number; 
+
+        h2.innerHTML = " Mod of " + first_number + " & " +  second_number + " is :-  " +  mod ;
+
+    })
+
+    </script>
+ 
+</body>
+</html>
