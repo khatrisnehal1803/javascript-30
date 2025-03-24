@@ -1,0 +1,47 @@
+* 
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.container
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color-container
+{
+    width: 25rem;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+    background-color:rgb(82, 53, 72) ;
+}
+button 
+{
+    width: 99%;
+    padding: 10px;
+    background-color: rgb(77, 84, 87);
+    color: white;
+    border-radius: 10px;
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#copybtn 
+{
+    height: 38px;
+    width: 25%;
+    background-color:rgb(77, 84, 87);
+    margin-left: 38%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    line-height: 38px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}
