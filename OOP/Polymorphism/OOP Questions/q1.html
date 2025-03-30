@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 👉 Scenario: You are building an ATM system where a user has a bank account. The balance should not be directly accessible but can be checked via a method.
+        // ✅ Task:
+        // Create a BankAccount class with a private #balance property.
+        // Implement deposit(amount) and withdraw(amount) methods.
+        // Add a getBalance() method to return the balance.
+
+     class BankAccount 
+    {
+        #balance; 
+
+        constructor(initialBalance = 0) 
+        {
+            this.#balance = initialBalance;
+        }
+
+        deposit(amount) 
+        {
+            if (amount > 0) 
+            {
+                this.#balance += amount;
+                document.writeln(`Deposited: $${amount}`);
+            } 
+            else 
+            {
+                document.writeln("Deposit amount must be positive.");
+            }
+        }
+
+        withdraw(amount) 
+        {
+            if (amount > 0 && amount <= this.#balance) 
+            {
+                this.#balance -= amount;
+                document.writeln(`Withdrawn: $${amount}`);
+            } 
+            else 
+            {
+                document.writeln("Invalid withdrawal amount or insufficient funds.");
+            }
+        }
+
+        getBalance() 
+        {
+            return this.#balance;
+        }
+    }
+
+    const myAccount = new BankAccount(100);
+    myAccount.deposit(50);
+    document.writeln("<br>");
+    myAccount.withdraw(30);
+    document.writeln("<br>");
+    document.writeln(`Current Balance: $${myAccount.getBalance()}`);
+
+    </script>
+</body>
+</html>

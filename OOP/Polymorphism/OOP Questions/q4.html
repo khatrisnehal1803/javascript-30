@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 🔹 4. Abstraction (Hiding Implementation Details)
+    // 👉 Scenario: You are developing a car rental system. The way a car starts (startEngine()) differs based on whether it’s a PetrolCar or ElectricCar, but the main method should remain the same.
+
+    // ✅ Task:
+
+    // Create an abstract Car class with a method startEngine().
+    // Implement two subclasses PetrolCar and ElectricCar, each defining startEngine() differently.
+
+        // Base class with abstraction
+class Car 
+{
+    constructor(brand) 
+    {
+        if (new.target === Car) 
+        {
+            throw new Error("Cannot instantiate an abstract class.");
+        }
+        this.brand = brand;
+    }
+
+    startEngine() 
+    {
+        throw new Error("startEngine() must be implemented by subclasses");
+    }
+}
+
+// Subclass: PetrolCar
+class PetrolCar extends Car 
+{
+    startEngine() {
+        document.writeln(`${this.brand}: Starting petrol engine with ignition key.`);
+    }
+}
+
+// Subclass: ElectricCar
+class ElectricCar extends Car 
+{
+    startEngine() {
+        document.writeln(`${this.brand}: Starting electric engine silently with push button.`);
+    }
+}
+
+// Example usage
+const petrolCar = new PetrolCar("Toyota");
+const electricCar = new ElectricCar("Tesla");
+
+petrolCar.startEngine();
+document.writeln("<br>");
+electricCar.startEngine();
+
+    </script>
+</body>
+</html>

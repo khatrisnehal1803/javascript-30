@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 🔹 2. Inheritance (Tricky Question with All Types)
+        // 👉 Scenario: You are working on a vehicle rental system. Different types of vehicles share some common properties, but there are multiple levels and categories of vehicles.
+        // ✅ Task:
+        // Create a Vehicle class with properties brand and year.
+        // Create a Car class that extends Vehicle and adds a fuelType property.
+        // Create a Bike class that extends Vehicle and adds a hasGear property.
+        // Add another class ElectricCar that extends Car and adds a batteryCapacity property.
+        // Implement a getDetails() method in Vehicle and override it in different subclasses.
+
+        // Base class
+    class Vehicle 
+    {
+        constructor(brand, year) 
+        {
+            this.brand = brand;
+            this.year = year;
+        }
+
+        getDetails() 
+        {
+            return `Brand: ${this.brand}, Year: ${this.year}`;
+        }
+    }
+
+    // Subclass: Car
+    class Car extends Vehicle 
+    {
+        constructor(brand, year, fuelType) 
+        {
+            super(brand, year);
+            this.fuelType = fuelType;
+        }
+
+        getDetails()
+        {
+            return `${super.getDetails()}, Fuel Type: ${this.fuelType}`;
+        }
+    }
+
+    // Subclass: Bike
+    class Bike extends Vehicle 
+    {
+        constructor(brand, year, hasGear) 
+        {
+            super(brand, year);
+            this.hasGear = hasGear;
+        }
+
+        getDetails() 
+        {
+            return `${super.getDetails()}, Has Gear: ${this.hasGear ? "Yes" : "No"}`;
+        }
+    }
+
+    // Subclass: ElectricCar
+    class ElectricCar extends Car 
+    {
+        constructor(brand, year, fuelType, batteryCapacity) 
+        {
+            super(brand, year, fuelType);
+            this.batteryCapacity = batteryCapacity;
+        }
+
+        getDetails()
+        {
+            return `${super.getDetails()}, Battery Capacity: ${this.batteryCapacity} kWh`;
+        }
+    }
+
+    // Example usage
+    const myCar = new Car("Toyota", 2022, "Petrol");
+    const myBike = new Bike("Yamaha", 2021, true);
+    const myElectricCar = new ElectricCar("Tesla", 2023, "Electric", 100);
+
+    document.writeln(myCar.getDetails());
+    document.writeln("<br>");
+    document.writeln(myBike.getDetails());
+    document.writeln("<br>");
+    document.writeln(myElectricCar.getDetails());
+    </script>
+</body>
+</html>

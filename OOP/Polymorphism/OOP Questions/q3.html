@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 🔹 3. Polymorphism (Method Overriding & Overloading)
+        // 👉 Scenario: You are creating a payment gateway that supports multiple payment methods like CreditCard and PayPal. Each method has a pay(amount) function, but the implementation is different.
+
+        // ✅ Task:
+
+        // Create a base class Payment with a pay(amount) method.
+        // Extend it into CreditCard and PayPal, overriding pay() to print different messages.
+        // Implement method overloading by adding a pay() method that either:
+        // Takes only an amount, or
+        // Takes an amount and currency (e.g., pay(100, "USD")).
+
+        class Payment 
+        {
+            pay(amount, currency = "USD") 
+            {
+                document.writeln(`Processing payment of ${amount} ${currency}.`);
+            }
+        }
+
+          class CreditCard extends Payment 
+        {
+            pay(amount, currency = "USD")
+            {
+                document.writeln(`Paid ${amount} ${currency} using Credit Card.`);
+            }
+        }
+
+            class PayPal extends Payment 
+        {
+            pay(amount, currency = "USD") 
+            {
+                document.writeln(`Paid ${amount} ${currency} via PayPal.`);
+            }
+        }
+
+        // Example usage
+        const creditCardPayment = new CreditCard();
+        const paypalPayment = new PayPal();
+
+        creditCardPayment.pay(100);
+        document.writeln("<br>");
+        creditCardPayment.pay(200, "EUR");
+        document.writeln("<br>"); 
+        paypalPayment.pay(50);
+        document.writeln("<br>");
+        paypalPayment.pay(75, "GBP");
+
+    </script>
+</body>
+</html>
