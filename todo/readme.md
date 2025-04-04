@@ -1,3 +1,4 @@
+https://github.com/user-attachments/assets/7edcb9c8-0258-490e-844d-d2fd5bbf2523
 Description of the To-Do List Project
 This project is a simple To-Do List Web Application built using HTML, CSS, and JavaScript (with jQuery). The application allows users to add, mark, and manage tasks efficiently.
 Features:
