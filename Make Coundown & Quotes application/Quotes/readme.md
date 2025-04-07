@@ -1,4 +1,4 @@
-
+https://github.com/user-attachments/assets/3fa7563c-c6de-4466-bbbe-4f733ae72b5b
 
 
  📝 Project Description Title: Dynamic Quote Rotator with Background Transitions
