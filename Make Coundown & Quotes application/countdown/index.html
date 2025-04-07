@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>COUNT DOWN</h1>
+    <input type="text" id="countdownInput" placeholder="Enter Second">
+    <button id="startBtn">Start</button>
+    <div id="countdownDisplay">0</div>
+
+    <script src="countdown.js"></script>
+
+    <script>
+        document.getElementById("startBtn").addEventListener("click", function() 
+        {
+            var seconds = parseInt(document.getElementById("countdownInput").value);
+            var countdownDisplay = document.getElementById("countdownDisplay");
+
+            if (isNaN(seconds) || seconds <= 0) 
+            {
+                countdownDisplay.textContent = "Please enter a valid number greater than 0";
+                return;
+            }
+
+            var countdown = setInterval(function() 
+            {
+                countdownDisplay.textContent = seconds;
+                if (seconds <= 0) {
+                    clearInterval(countdown);
+                    countdownDisplay.textContent = "Time's up!";
+                }
+                seconds--;
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

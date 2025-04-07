@@ -1,0 +1,68 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    background: #826ff0;
+    color: #d0e2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+input 
+{
+    padding: 10px;
+    font-size: 15px;
+    width: 100px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+button 
+{
+    padding: 10px 20px;
+    font-size: 25px;
+    border: none;
+    border-radius: 8px;
+    background-color:#826ff0;
+    color:  #d0e2f5;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover 
+{
+    background-color: #826ff0;
+}
+
+#countdownDisplay 
+{
+    font-size: 70px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#countdownDisplay.TimeUp 
+{
+    color: rgb(240, 136, 136);
+    transform: scale(1.2); /* Make it slightly bigger when time's up */
+}
+
+@media (max-width: 600px) 
+{
+    input, button 
+    {
+        font-size: 40px;
+        padding: 8px;
+        width: 80%;
+    }
+
+    #countdownDisplay 
+    {
+        font-size: 50px;
+    }
+}
