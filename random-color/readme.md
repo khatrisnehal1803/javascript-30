@@ -1,4 +1,8 @@
-https://github.com/user-attachments/assets/e10d2587-a536-487f-9adf-e645728a7e14
+https://github.com/user-attachments/assets/010cc4ba-9037-4628-9e09-e6122c82f406
+
+
+
+
 Push the Code to GitHub:
 
 Create a repository on GitHub named random-color-generator.
