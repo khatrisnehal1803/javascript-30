@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipe book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Book</h1>
+        <input type="text" id="searchInput" placeholder="serch recipe...">
+    </header>
+    <main>
+        <section id="recipefromsection">
+            <h2>Add / Edit recipe</h2>
+            <form id="recipefrom">
+                <input type="hidden" id="recipeId">
+                <input type="text" id="recipetitle" placeholder="title">
+                <textarea  id="recipeIngredients" placeholder="Ingredients" required></textarea>
+                <textarea  id="recipeInsturctions" placeholder="Ingredients" required></textarea>
+                <button type="submit">save recipe</button>
+            </form>
+        </section>
+        <section id="filtersection">
+            <h2>Filter</h2>
+            <select id="filterselect">
+                <option value="">All Recipe</option>
+                <option value="">Short Recipe (under 100 chars)</option>
+                <option value="">Long Recipe (over 100 chars)</option>
+            </select>
+        </section>
+        <section>
+            <h2>Rcripe List</h2>
+            <div></div>
+        </section>
+    </main>
+    <script src="exam.js"></script>
+</body>
+</html>
